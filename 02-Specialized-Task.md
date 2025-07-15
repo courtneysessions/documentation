@@ -107,7 +107,7 @@ class AnalyzeDocumentView(APIView):
 {
     "document_name": "contract_dispute.pdf",
     "filling_date": "2023-11-01",
-    "doc_type": "Civil Case",
+    "case_type": "Civil Case",
     "plaintiffs": ["Jane Smith"],
     "defendants": ["XYZ Corp"],
     "case_number": "LD/4456/2023",
