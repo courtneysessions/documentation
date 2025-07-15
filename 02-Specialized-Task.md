@@ -51,7 +51,7 @@ opinions, or build relationships with the user.
 
 Return a JSON object with the following structure:
 {{"date": "Exact or inferred date of the document (ISO 8601 format if possible)",
-    "type": "Document type (e.g., complaint, judgment, motion)",
+    "type": "Case type (e.g., complaint, judgment, motion)",
     "plaintiffs": ["Full names of all plaintiffs, if present"],
     "defendants": ["Full names of all defendants, if present"],
     "claimants": ["List of claimants, if different from plaintiffs"],

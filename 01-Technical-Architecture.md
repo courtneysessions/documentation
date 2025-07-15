@@ -3,24 +3,7 @@
 **Virtual LLM Stack**
 
 ```
-┌─────────────────────────────────────────┐
-│ Judicial Domain-Specific Models         │
-├─────────────────────────────────────────┤
-│ Gemma 7B/9B Fine-tuned                  │
-│ - Court Document Classification         │
-│ - Legal Entity Recognition              │
-│ - Jurisdiction-Specific Compliance      │
-├─────────────────────────────────────────┤
-│ Gemini Pro/Ultra (API)                  │
-│ - Complex Document Summarization        │
-│ - Multi-modal Analysis (PDF + Text)     │
-│ - Agentic Workflow Orchestration        │
-├─────────────────────────────────────────┤
-│ Custom Embedding Models                 │
-│ - Legal Document Similarity             │
-│ - Case Law Retrieval                    │
-│ - Precedent Matching                    │
-└─────────────────────────────────────────┘
+
 ```
 ##  Gemini Integration Strategy: Prototype to MVP
 

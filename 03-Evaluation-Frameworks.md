@@ -47,6 +47,11 @@
             'legal_terminology_accuracy',
             'procedural_compliance_rate'
         ],
+        'operational_metrics': [
+            'processing_latency_ms',
+            'document_throughput_per_hour',
+            'error_reduction_percentage'
+        ]
     }
 ```
 
