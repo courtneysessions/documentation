@@ -23,10 +23,11 @@ Scheduling Agent:
 ![Agentic Workflow](./agentic.jpg)
 
 **Court-Optimized Model Variants**
-Gemma-Judicial Local Series:
-Gemma-2B-Judicial: Ultra-lightweight for basic document classification
-Gemma-7B-Judicial-Pro: Full-featured local processing with compliance validation
-Gemma-9B-Judicial-Enterprise: Maximum accuracy for high-stakes legal analysis
+
+**Gemma-Judicial Local Series**:
+- Gemma-2B-Judicial: Ultra-lightweight for basic document classification
+- Gemma-7B-Judicial-Pro: Full-featured local processing with compliance validation
+- Gemma-9B-Judicial-Enterprise: Maximum accuracy for high-stakes legal analysis
 
 
 **Model Compression & Quantization**
