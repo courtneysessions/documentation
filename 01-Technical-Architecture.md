@@ -1,10 +1,9 @@
 ## Technical Architecture
 
-**Virtual LLM Stack**
+**Tech Stack**
+<img width="1920" height="1080" alt="Courtney's tech stack" src="https://github.com/user-attachments/assets/5421804e-f6f1-449d-b89e-4abdd95453d7" />
 
-```
 
-```
 ##  Gemini Integration Strategy: Prototype to MVP
 
 - **Gemini Pro**: Complex document analysis requiring multi-step reasoning.

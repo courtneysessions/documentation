@@ -23,35 +23,32 @@ const classifier = new natural.BayesClassifier();
 
 ```javascript
 prompt = f"""{hints}
-Carefully analyze the provided legal document image and extract the following structured information in JSON format. Ensure all fields are interpreted accurately, using contextual understanding of legal language and layout. Be concise and factual.
-● Follow system instructions 
-● Correctly interprets the request 
-● Fulfills all of the instructions 
-● Provides relevant details to address the image and extract request 
+Carefully analyze the provided legal document image and extract the following structured information in JSON format. Ensure all fields are interpreted accurately, using contextual understanding of legal language and layout. Keep to the following system instructions:
+● Correctly interpret each request 
+● Fulfill all of the system instructions 
+● Provide relevant details to address the image and extract request 
 ● Factually correct (verified through classifiers) 
 ● Separates response into paragraphs, lists, or tables, as 
 needed 
 ● When appropriate, use Markdown or LaTex (but without 
 inline $...$ syntax) 
-● Does not contradict another part of the response 
+● Do not contradict another part of the response 
 ● No repetition or rambling 
-● Within Limitations 
+● Within Limitations:
 ● Do not browse the internet or provide URLs 
-● Does not mention taking action in the real world outside the provided documentation 
-● Does not claim to have knowledge about recent events within the last 6-12 months. 
-● Does not claim to remember previous conversations. 
-● Does not claim to have any information about the User. 
-● Does not pretend to be human, express emotions or 
-opinions, or build relationships with the user. 
-● Presentation 
+● Do not mention taking action in the real world outside the provided documentation 
+● Do not claim to have knowledge about recent events within the last 6-12 months. 
+● Do not claim to remember previous conversations. 
+● Do not claim to have any information about the User. 
+● Do not pretend to be human, express emotions or opinions, or build relationships with the user. 
 ● Uses proper spelling & grammar 
-● stay organized & structured so each extract and summarization are easy to consume 
-● Be Concise with each summarization, no more than 500 words
+● Stay organized & structured so that each extract and summarization are easy to consume 
+● Be Concise with each summarization, no more than 1000 words
 ● Responses are to-the-point and not conversational 
 
 Return a JSON object with the following structure:
 {{"date": "Exact or inferred date of the document (ISO 8601 format if possible)",
-    "type": "Case type (e.g., complaint, judgment, motion)",
+    "type": "Document type (e.g., complaint, judgment, motion)",
     "plaintiffs": ["Full names of all plaintiffs, if present"],
     "defendants": ["Full names of all defendants, if present"],
     "claimants": ["List of claimants, if different from plaintiffs"],
@@ -61,7 +58,7 @@ Return a JSON object with the following structure:
     "location": "Jurisdiction or court location",
     "summary": "Concise summary (2–3 sentences) of the document’s content and purpose",
     "accuracyScore": "Confidence score (0–100%) based on completeness, clarity, and consistency",
-    "confidenceReasons": "Brief list of reasons justifying the accuracy score (e.g., missing data, unclear handwriting, ambiguous text)"}}
+    "confidenceReasons": "Brief list of reasons justifying the accuracy score (e.g., missing data, wrong formatting, missing requirements, ambiguous text)"}}
 Ensure that any missing fields are clearly noted, and provide partial values if full details cannot be confidently determined.
 """
 ```
@@ -116,7 +113,7 @@ class AnalyzeDocumentView(APIView):
     "location": "Federal High Court",
     "summary": "This case involves a breach of contract...",
     "accuracy_score": "92%",
-    "confidence_reasons": "Clear language, recognized entities",
+    "confidence_reasons": "Clear legal terminology, proper formatting, recognized entities",
     "processing_time_seconds": 9,
     "is_complete": true
 }
