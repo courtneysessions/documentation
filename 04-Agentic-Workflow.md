@@ -12,7 +12,6 @@
     }
 ```
 
-
 **Multi-Agent System Design**
 
 ![Agentic Workflow](./agentic.jpg)
